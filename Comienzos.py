@@ -114,3 +114,7 @@ for coche in coches:
     print(coche)
 for i, coche in enumerate(coches):
     print(str(i)+" - "+coche)
+<<<<<<< HEAD
+=======
+#Modulos
+>>>>>>> 4a041abb97d987f52e3262cb0dc875cfc808d9be

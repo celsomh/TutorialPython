@@ -1,3 +1,6 @@
+import time
+
+
 def fib(n):
     '''Escribe la serie de Fibonacci hasta n'''  # esto es un docstring
     a, b = 0, 1
@@ -89,12 +92,19 @@ print("Loro 3")
 loro(tension=300000, accion='VOOOOM')
 print("Loro 4")
 loro(accion='VOOOOOOM', tension=4000000)
-def ventadequeso(tipo,*argumentos,**palabrasclaves):
-    print('-- ¿Tiene',tipo,'?')
-    print('-- Lo siento, nos quedamos sin',tipo)
+
+print('-'*40, '\n', 'venta de queso')
+
+
+def ventadequeso(tipo, *argumentos, **palabrasclaves):
+    print('-- ¿Tiene', tipo, '?')
+    print('-- Lo siento, nos quedamos sin', tipo)
     for arg in argumentos:
         print(arg)
     print("-"*40)
     for c in palabrasclaves:
-        print(c,':',palabrasclaves[c])
-ventadequeso()
+        print(c, ':', palabrasclaves[c])
+
+
+ventadequeso('Limburger', 'Es muy liquido, sr.', 'Realmente es muy muy liquido, sr.',
+             cliente='Juan Garau', vendedor='Miguel Paez', puesto='Venta de Queso Argentino')
