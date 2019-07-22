@@ -53,6 +53,8 @@ def f(arg=i):
 i = 6
 f()
 
+print('f(a,L[])', '\n', '-'*40)
+
 
 def f(a, L=[]):
     L.append(a)
@@ -62,6 +64,8 @@ def f(a, L=[]):
 print(f(1))
 print(f(2))
 print(f(3))
+
+print('f(a,L=None)')
 
 
 def f(a, L=None):
@@ -108,3 +112,26 @@ def ventadequeso(tipo, *argumentos, **palabrasclaves):
 
 ventadequeso('Limburger', 'Es muy liquido, sr.', 'Realmente es muy muy liquido, sr.',
              cliente='Juan Garau', vendedor='Miguel Paez', puesto='Venta de Queso Argentino')
+# Documentacion
+print('Documentación', '\n', '-'*40)
+
+
+def mi_funcion():
+    '''No hace mas que documentar la función.
+
+No, de verdad. No hace nada.
+    '''
+    pass
+
+
+print(mi_funcion.__doc__)
+# Anotación de funciones
+
+
+def f(jamon: str, huevos: str = 'huevos') -> str:
+    print('Anotaciones:', f.__annotations__)
+    print('Argumentos:', jamon, huevos)
+    return jamon+'y'+huevos
+
+
+print(f('carnes'))
