@@ -16,3 +16,9 @@ def fib2(n):
         resultado.append(b)
         a, b = b, a+b
     return resultado
+
+
+# Con el siguiente código el módulo puede ser usado como script y como módulo importable
+if __name__ == '__main__':
+    import sys
+    fib(int(sys.argv[1]))
