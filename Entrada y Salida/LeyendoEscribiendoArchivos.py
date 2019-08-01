@@ -33,8 +33,11 @@ with open('archivodetrabajo', 'w') as f:
     print('Caracteres escritos:', n_characters_wrote)
     f.write('\n')
 print('-'*60)
-with open('archivodetrabajo', 'rb+') as f:
+b = open('archivodetrabajobinario', 'w')
+with open('archivodetrabajobinario', 'rb+') as f:
     f.write(b'0987654321abcdef')
     print(f.seek(5))
     print(f.read(1))
+    print(f.tell())
     print(f.seek(-3, 2))
+    print(f.read(1))
